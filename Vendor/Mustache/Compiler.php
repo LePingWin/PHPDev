@@ -56,8 +56,8 @@ class Mustache_Compiler
     }
 
     /**
-     * Enable pragmas across all templates, regardless of the presence of pragma
-     * tags in the individual templates.
+     * Enable pragmas across all views, regardless of the presence of pragma
+     * tags in the individual views.
      *
      * @internal Users should set global pragmas in Mustache_Engine, not here :)
      *

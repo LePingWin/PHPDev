@@ -10,9 +10,9 @@
  */
 
 /**
- * A Mustache Template loader for inline templates.
+ * A Mustache Template loader for inline views.
  *
- * With the InlineLoader, templates can be defined at the end of any PHP source
+ * With the InlineLoader, views can be defined at the end of any PHP source
  * file:
  *
  *     $loader  = new Mustache_Loader_InlineLoader(__FILE__, __COMPILER_HALT_OFFSET__);
@@ -54,7 +54,7 @@ class Mustache_Loader_InlineLoader implements Mustache_Loader
     protected $templates;
 
     /**
-     * The InlineLoader requires a filename and offset to process templates.
+     * The InlineLoader requires a filename and offset to process views.
      *
      * The magic constants `__FILE__` and `__COMPILER_HALT_OFFSET__` are usually
      * perfectly suited to the job:
@@ -62,11 +62,11 @@ class Mustache_Loader_InlineLoader implements Mustache_Loader
      *     $loader = new Mustache_Loader_InlineLoader(__FILE__, __COMPILER_HALT_OFFSET__);
      *
      * Note that this only works if the loader is instantiated inside the same
-     * file as the inline templates. If the templates are located in another
+     * file as the inline views. If the views are located in another
      * file, it would be necessary to manually specify the filename and offset.
      *
-     * @param string $fileName The file to parse for inline templates
-     * @param int    $offset   A string offset for the start of the templates.
+     * @param string $fileName The file to parse for inline views
+     * @param int    $offset   A string offset for the start of the views.
      *                         This usually coincides with the `__halt_compiler`
      *                         call, and the `__COMPILER_HALT_OFFSET__`
      */
@@ -105,7 +105,7 @@ class Mustache_Loader_InlineLoader implements Mustache_Loader
     }
 
     /**
-     * Parse and load templates from the end of a source file.
+     * Parse and load views from the end of a source file.
      */
     protected function loadTemplates()
     {

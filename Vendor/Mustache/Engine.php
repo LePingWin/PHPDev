@@ -66,18 +66,18 @@ class Mustache_Engine
      * Passing an $options array allows overriding certain Mustache options during instantiation:
      *
      *     $options = array(
-     *         // The class prefix for compiled templates. Defaults to '__Mustache_'.
+     *         // The class prefix for compiled views. Defaults to '__Mustache_'.
      *         'template_class_prefix' => '__MyTemplates_',
      *
-     *         // A Mustache cache instance or a cache directory string for compiled templates.
-     *         // Mustache will not cache templates unless this is set.
+     *         // A Mustache cache instance or a cache directory string for compiled views.
+     *         // Mustache will not cache views unless this is set.
      *         'cache' => dirname(__FILE__).'/tmp/cache/mustache',
      *
      *         // Override default permissions for cache files. Defaults to using the system-defined umask. It is
      *         // *strongly* recommended that you configure your umask properly rather than overriding permissions here.
      *         'cache_file_mode' => 0666,
      *
-     *         // Optionally, enable caching for lambda section templates. This is generally not recommended, as lambda
+     *         // Optionally, enable caching for lambda section views. This is generally not recommended, as lambda
      *         // sections are often too dynamic to benefit from caching.
      *         'cache_lambda_templates' => true,
      *
@@ -121,8 +121,8 @@ class Mustache_Engine
      *         // This currently defaults to false, but will default to true in v3.0.
      *         'strict_callables' => true,
      *
-     *         // Enable pragmas across all templates, regardless of the presence of pragma tags in the individual
-     *         // templates.
+     *         // Enable pragmas across all views, regardless of the presence of pragma tags in the individual
+     *         // views.
      *         'pragmas' => [Mustache_Engine::PRAGMA_FILTERS],
      *     );
      *
@@ -622,7 +622,7 @@ class Mustache_Engine
     /**
      * Load a Mustache partial Template by name.
      *
-     * This is a helper method used internally by Template instances for loading partial templates. You can most likely
+     * This is a helper method used internally by Template instances for loading partial views. You can most likely
      * ignore it completely.
      *
      * @param string $name

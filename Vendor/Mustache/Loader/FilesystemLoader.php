@@ -36,7 +36,7 @@ class Mustache_Loader_FilesystemLoader implements Mustache_Loader
      * Passing an $options array allows overriding certain Loader options during instantiation:
      *
      *     $options = array(
-     *         // The filename extension used for Mustache templates. Defaults to '.mustache'
+     *         // The filename extension used for Mustache views. Defaults to '.mustache'
      *         'extension' => '.ms',
      *     );
      *
@@ -123,7 +123,7 @@ class Mustache_Loader_FilesystemLoader implements Mustache_Loader
     }
 
     /**
-     * Only check if baseDir is a directory and requested templates are files if
+     * Only check if baseDir is a directory and requested views are files if
      * baseDir is using the filesystem stream wrapper.
      *
      * @return bool Whether to check `is_dir` and `file_exists`

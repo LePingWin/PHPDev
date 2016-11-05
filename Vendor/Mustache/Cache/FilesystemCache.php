@@ -27,7 +27,7 @@ class Mustache_Cache_FilesystemCache extends Mustache_Cache_AbstractCache
     /**
      * Filesystem cache constructor.
      *
-     * @param string $baseDir  Directory for compiled templates
+     * @param string $baseDir  Directory for compiled views
      * @param int    $fileMode Override default permissions for cache files. Defaults to using the system-defined umask
      */
     public function __construct($baseDir, $fileMode = null)
